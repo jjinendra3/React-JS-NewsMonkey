@@ -1,0 +1,123 @@
+{
+  "status": "ok",
+  "totalResults": 4,
+  "articles": [
+    {
+      "source": {
+        "id": "handelsblatt",
+        "name": "Handelsblatt"
+      },
+      "author": "Handelsblatt",
+      "title": "Alarmsignal Nischenrohstoffe: Fünf Märkte zeigen, wie Chinas Erholung stockt",
+      "description": "Der Blick auf fünf wenig beachtete Rohstoffmärkte zeigt, dass sich die chinesische Wirtschaft langsamer erholt als erwartet. Das ist auch für die europäische Industrie relevant.",
+      "url": "https://www.handelsblatt.com/finanzen/maerkte/devisen-rohstoffe/glas-lng-styrol-alarmsignal-nischenrohstoffe-fuenf-maerkte-zeigen-wie-chinas-erholung-stockt/29175878.html",
+      "urlToImage": "https://www.handelsblatt.com/images/lkw-transportieren-lng-ueber-die-xihoumen-bruecke-in-zhoushan/29175924/2-format2003.jpg",
+      "publishedAt": "2023-05-31T07:11:26+00:00",
+      "content": "Lkw transportieren LNG über die Xihoumen-Brücke in ZhoushanDie letzten Kilometer zu den Verbrauchern wird katarisches und australisches Flüssiggas oft per Truck transportiert.\r\n(Foto: Reuters)\r\nFrank… [+1396 chars]"
+    },
+    {
+      "source": {
+        "id": "australian-financial-review",
+        "name": "Australian Financial Review"
+      },
+      "author": "Alex Gluyas",
+      "title": "Iron ore: Commodity prices slums as China demand concerns intensify",
+      "description": "Mining and energy stocks tumbled on Wednesday as traders grew increasingly concerned about the pace of China’s economic recovery.",
+      "url": "http://www.afr.com/markets/commodities/commodity-prices-slump-as-china-demand-concerns-intensify-20230531-p5dcr5",
+      "urlToImage": "https://static.ffx.io/images/$zoom_0.5933%2C$multiply_2%2C$ratio_1.777778%2C$width_1059%2C$x_937%2C$y_199/t_crop_custom/c_scale%2Cw_800%2Cq_88%2Cf_jpg/t_afr_no_label_no_age_social_wm/cf63d5ff44e710bcc748bc2fdd2d8e467c49be5c",
+      "publishedAt": "2023-05-31T04:56:23Z",
+      "content": "Investors have also been fixated on whether the US debt ceiling would be raised in time to avert a potential US default. A key House of Representatives committee voted to send a bill to suspend the d… [+3221 chars]"
+    },
+    {
+      "source": {
+        "id": "bbc-news",
+        "name": "BBC News"
+      },
+      "author": "BBC News",
+      "title": "Kathleen Stock: Protests at Oxford Union as talk goes ahead",
+      "description": "Protesters gathered at Oxford Union, after the prime minister backs gender-critical academic's invite.",
+      "url": "http://www.bbc.co.uk/news/education-65714821",
+      "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/FE81/production/_129935156_whatsappimage2023-05-30at17.18.01-2.jpg",
+      "publishedAt": "2023-05-31T03:37:17.0136983Z",
+      "content": "Hundreds of people gathered outside the Oxford Union to protest against a talk by the gender-critical academic, Kathleen Stock.\r\nProf Stock had said she was \"very determined\" for the talk to go ahead… [+5972 chars]"
+    },
+    {
+      "source": {
+        "id": "bloomberg",
+        "name": "Bloomberg"
+      },
+      "author": "Bloomberg",
+      "title": "Stock Market Today: Dow, S&P Live Updates for May 31",
+      "description": null,
+      "url": "https://news.google.com/rss/articles/CBMicWh0dHBzOi8vd3d3LmJsb29tYmVyZy5jb20vbmV3cy9hcnRpY2xlcy8yMDIzLTA1LTMwL2FzaWFuLXNoYXJlcy1zZXQtdG8tZmFsbC1hcy1jb25ncmVzcy1tdWxscy1hY2NvcmQtbWFya2V0cy13cmFw0gEA?oc=5",
+      "urlToImage": null,
+      "publishedAt": "2023-05-30T22:38:41+00:00",
+      "content": null
+    },
+    {
+      "source": {
+        "id": "reuters",
+        "name": "Reuters"
+      },
+      "author": null,
+      "title": "Despite Nvidia's rally, some say the stock is actually cheaper",
+      "description": "Even after Nvidia Corp's <a href=\"https://www.reuters.com/companies/NVDA.O\" target=\"_blank\">(NVDA.O)</a> blistering rally in recent days, the chip developer's valuation has actually fallen, at least by one measure widely used by analysts and investors.",
+      "url": "https://www.reuters.com/technology/despite-nvidias-rally-some-say-stock-is-actually-cheaper-2023-05-30/",
+      "urlToImage": "https://www.reuters.com/resizer/yUB-kwEm_XuxKYxahQABP66GeAk=/1200x628/smart/filters:quality(80)/cloudfront-us-east-2.images.arcpublishing.com/reuters/LXG6U42VQFJHBPY6344F7ITG3Y.jpg",
+      "publishedAt": "2023-05-30T22:03:18Z",
+      "content": "NEW YORK/SAN FRANCISCO, May 30 (Reuters) - Even after Nvidia Corp's (NVDA.O) blistering rally in recent days, the chip developer's valuation has actually fallen, at least by one measure widely used b… [+3276 chars]"
+    },
+    {
+      "source": {
+        "id": "google-news-uk",
+        "name": "Google News (UK)"
+      },
+      "author": "BBC",
+      "title": "Kathleen Stock: Protests at Oxford Union as talk goes ahead - BBC",
+      "description": null,
+      "url": "https://news.google.com/rss/articles/CBMiK2h0dHBzOi8vd3d3LmJiYy5jb20vbmV3cy9lZHVjYXRpb24tNjU3MTQ4MjHSAS9odHRwczovL3d3dy5iYmMuY29tL25ld3MvZWR1Y2F0aW9uLTY1NzE0ODIxLmFtcA?oc=5",
+      "urlToImage": null,
+      "publishedAt": "2023-05-30T19:13:47+00:00",
+      "content": null
+    },
+    {
+      "source": {
+        "id": "svenska-dagbladet",
+        "name": "Svenska Dagbladet"
+      },
+      "author": null,
+      "title": "Vinprovning – ett land, en druva, fem olika klimat och terroir",
+      "description": "Vinprovning – ett land, en druva, fem olika klimat och terroir Plats: Picture This Gallery, Sankt Paulsgatan 29, StockholmOrdinarie pris: 325 krPris för prenumeranter på SvD Vinklubb: 195 krNär: 13 juni 2023Tid: kl \r\nDessa viner kommer vi att prova under",
+      "url": "https://accent.svd.se/vinprovning-ett-land-en-druva-fem-olika-klimat-och-terroir.html?utm_source=accentbox&amp;utm_medium=svdse&amp;utm_campaign=vinprovning_ptg",
+      "urlToImage": null,
+      "publishedAt": "2023-05-26T12:52:22.315632Z",
+      "content": null
+    },
+    {
+      "source": {
+        "id": "financial-post",
+        "name": "Financial Post"
+      },
+      "author": "Financial Post",
+      "title": "Financial Post",
+      "description": "Stay up to date on the latest news, research and market updates on Canadian investments and stocks.",
+      "url": "http://business.financialpost.com/category/investing/",
+      "urlToImage": "https://dcs-static.gprod.postmedia.digital/13.5.3/websites/images/fp/ogimage-fp.png",
+      "publishedAt": "2023-05-17T20:37:35.4307753Z",
+      "content": null
+    },
+    {
+      "source": {
+        "id": "fortune",
+        "name": "Fortune"
+      },
+      "author": "Kevin Kelleher",
+      "title": "Buybacks vs dividends? In market downturns, the rules may change",
+      "description": "CFOs can return profits to shareholders with dividends and buybacks. Here's how they may fare during a stock market selloff or recession.",
+      "url": "https://fortune.com/2022/06/01/buybacks-vs-dividends-stock-market-downturns-recession-cfo-daily-newsletter/",
+      "urlToImage": "https://content.fortune.com/wp-content/uploads/2022/05/GettyImages-1310316502.jpg?resize=1200,600",
+      "publishedAt": "2022-06-01T10:15:00Z",
+      "content": "Skip to Content"
+    }
+  ]
+}
