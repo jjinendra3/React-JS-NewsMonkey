@@ -1,18 +1,17 @@
-import React, { Component } from "react";
-import logo from "C:/Users/asus/Desktop/CWH/newsapp/src/android-chrome-192x192.png";
+import React from "react";
 import { Link } from "react-router-dom";
 const Navbar = (props) => {
   return (
     <div>
-      <nav className="navbar navbar-expand-lg bg-body-tertiary">
+      <nav className="navbar navbar-expand-lg bg-dark navbar-dark sticky-top">
         <div className="container-fluid">
           <Link className="navbar-brand" to="/" style={{ fontWeight: "500" }}>
-            <img
+            {/* <img
               src={logo}
               className="my-1"
               style={{ width: "10%", height: "10%", borderRadius: "100%" }}
               alt=""
-            />
+            /> */}
             NewsMonkey
           </Link>
           <button

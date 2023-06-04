@@ -3,10 +3,10 @@ import React, { useState } from "react";
 import Navbar from "./components/Navbar";
 import Newsbox from "./components/News";
 import LoadingBar from "react-top-loading-bar";
+
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 const App = () => {
   const [progress, setprogress] = useState(0);
-
   const progreass = (progrees) => {
     setprogress(progrees);
   };
@@ -25,7 +25,7 @@ const App = () => {
                 api={apiKey}
                 progress={progreass}
                 key="general"
-                page_size={6}
+                page_size={12}
                 country="in"
                 category="general"
               />
@@ -39,7 +39,7 @@ const App = () => {
                 api={apiKey}
                 progress={progreass}
                 key="business"
-                page_size={6}
+                page_size={12}
                 country="in"
                 category="business"
               />
@@ -53,7 +53,7 @@ const App = () => {
                 api={apiKey}
                 progress={progreass}
                 key="entertainment"
-                page_size={6}
+                page_size={12}
                 country="in"
                 category="entertainment"
               />
@@ -67,7 +67,7 @@ const App = () => {
                 api={apiKey}
                 progress={progreass}
                 key="health"
-                page_size={6}
+                page_size={12}
                 country="in"
                 category="health"
               />
@@ -81,7 +81,7 @@ const App = () => {
                 api={apiKey}
                 progress={progreass}
                 key="science"
-                page_size={6}
+                page_size={12}
                 country="in"
                 category="science"
               />
@@ -95,7 +95,7 @@ const App = () => {
                 api={apiKey}
                 progress={progreass}
                 key="sports"
-                page_size={6}
+                page_size={12}
                 country="in"
                 category="sports"
               />
@@ -109,7 +109,7 @@ const App = () => {
                 api={apiKey}
                 progress={progreass}
                 key="technology"
-                page_size={6}
+                page_size={12}
                 country="in"
                 category="technology"
               />

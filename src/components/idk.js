@@ -2,13 +2,11 @@ import React, { useEffect, useState } from "react";
 import Newsitem from "./Newsitem";
 import Loader from "./Loader";
 import PropTypes from "prop-types";
-import Weather from "./Weather";
-
 const News = (props) => {
   const [articles, setarticles] = useState([]);
   const [loading, setloading] = useState(false);
   const [page, setpage] = useState(1);
-  const [totalRes, settotalRes] = useState(0);
+  const [totalPage, settotalPage] = useState(0);
 
   const UpdateNews = async (whycall) => {
     props.progress(10);
@@ -25,6 +23,7 @@ const News = (props) => {
         props.page_size
       }&sortBy=popularity`;
       setpage(page + 1);
+      console.log(page);
     }
     if (whycall === "prev") {
       url = `
@@ -40,34 +39,54 @@ const News = (props) => {
     datas = await datas.json();
     props.progress(50);
     setarticles(datas.articles);
-    settotalRes(datas.totalResults);
+    settotalPage(datas.totalResults);
     setloading(false);
     props.progress(100);
   };
   const prev = () => {
     UpdateNews("prev");
+    // props.progress(10);
+    // let url = `https://newsapi.org/v2/top-headlines?&country=${
+    //   props.country
+    // }&apiKey=${props.api}&page=${page - 1}&pageSize=${
+    //   props.page_size
+    // }&sortBy=popularity`;
+    // setloading(true);
+    // let datas = await fetch(url);
+    // datas = await datas.json();
+    // props.progress(50);
+    // setpage(page-1);
+    // setarticles(datas.articles);
+    // settotalPage(datas.totalResults);
+    // setloading(false);
+    // props.progress(100);
   };
   const next = () => {
     UpdateNews("next");
+    // props.progress(10);
+    // let url = `https://newsapi.org/v2/top-headlines?&country=${
+    //   props.country
+    // }&apiKey=${props.api}&page=${page + 1}&pageSize=${
+    //   props.page_size
+    // }&sortBy=popularity`;
+    // setloading(true);
+    // let datas = await fetch(url);
+    // datas = await datas.json();
+    // props.progress(50);
+    // setpage(page+1);
+    // setarticles(datas.articles);
+    // settotalPage(datas.totalResults);
+    // setloading(false);
+    // props.progress(100);
   };
   useEffect(() => {
     UpdateNews("first");
-    // eslint-disable-next-line
   }, []);
 
   return (
     <>
-      <div className="container my-3" style={{ justifyContent: "center" }}>
-        <div className="d-flex justify-content-between ">
-          <div className="container">
-            {" "}
-            <br />{" "}
-            <h1 className="text " style={{ marginLeft: "5%" }}>
-              Top Headlines
-            </h1>
-          </div>
-          <Weather />
-        </div>
+      <div className="container my-3">
+        <h1 className="text-center my-3">Top Headlines</h1>
         {loading && <Loader />}
         <div className="container my-3">
           <div className="row">
@@ -76,21 +95,19 @@ const News = (props) => {
                 return (
                   //the div class that is just after muts have the unique key
                   <div className="col-md-4" key={elements.url}>
-                    <div className="d-flex justify-content-center">
-                      <Newsitem
-                        title={elements.title}
-                        description={elements.description}
-                        imgurl={elements.urlToImage}
-                        newsurl={elements.url}
-                        publish_date={elements.publishedAt}
-                        author={elements.author}
-                      />
-                    </div>
+                    <Newsitem
+                      title={elements.title}
+                      description={elements.description}
+                      imgurl={elements.urlToImage}
+                      newsurl={elements.url}
+                      publish_date={elements.publishedAt}
+                      author={elements.author}
+                    />
                   </div>
                 );
               })}
           </div>
-          <div className="d-flex justify-content-between my-4">
+          <div className="d-flex justify-content-between my-5">
             <button
               type="button"
               disabled={page <= 1}
@@ -102,7 +119,8 @@ const News = (props) => {
             <button
               type="button"
               className="btn btn-primary"
-              disabled={page + 1 > Math.ceil(totalRes / props.page_size)}
+              style={{ marginRight: "10%" }}
+              disabled={page + 1 > Math.ceil(totalPage / props.page_size)}
               onClick={next}
             >
               Next

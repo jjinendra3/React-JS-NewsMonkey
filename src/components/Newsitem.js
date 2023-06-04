@@ -10,7 +10,7 @@ const Newsitem = (props) => {
           src={imgurl === null ? logo : imgurl}
           className="card-img-top"
           alt="..."
-          style={{ width: "18rem", height: "15rem" }}
+          style={{ height: "15rem" }}
         />
         <div className="card-body">
           <h5 className="card-title">
