@@ -10,17 +10,23 @@ const Weather = () => {
     "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pngwing.com%2Fen%2Fsearch%3Fq%3Derror&psig=AOvVaw2CmbXL32ahaVghebA0fsuJ&ust=1685977084010000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCND4_Jrwqf8CFQAAAAAdAAAAABAZ"
   );
   useEffect(() => {
+    updatelocation();
+    //eslint-disable-next-line
+  }, []);
+  const updatelocation = () => {
     axios
       .get(
-        `http://api.weatherstack.com/current?access_key=${REACT_APP_WEATHER_APP}&query=${location}`
+        `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${WeatherApi}`
       )
+      //use your api key here
       .then((response) => {
-        //use your api key here
-        settemp(response.data.current.temperature);
-        setimg(response.data.current.weather_icons);
-      });
-  }, []);
+        settemp(Math.floor(response.data.main.temp - 276.15));
 
+        setimg(
+          `http://openweathermap.org/img/w/${response.data.weather[0].icon}.png`
+        );
+      });
+  };
   return (
     <div
       className="container"
@@ -90,6 +96,7 @@ const Weather = () => {
                     className="btn btn-primary my-1"
                     onClick={() => {
                       setlocation("Mumbai");
+                      updatelocation();
                     }}
                   >
                     Mumbai
@@ -99,6 +106,7 @@ const Weather = () => {
                     className="btn btn-primary my-1"
                     onClick={() => {
                       setlocation("Delhi");
+                      updatelocation();
                     }}
                   >
                     Delhi
@@ -108,6 +116,7 @@ const Weather = () => {
                     className="btn btn-primary my-1"
                     onClick={() => {
                       setlocation("Chennai");
+                      updatelocation();
                     }}
                   >
                     Chennai
@@ -117,6 +126,7 @@ const Weather = () => {
                     className="btn btn-primary my-1"
                     onClick={() => {
                       setlocation("Kolkata");
+                      updatelocation();
                     }}
                   >
                     Kolkata
@@ -126,6 +136,7 @@ const Weather = () => {
                     className="btn btn-primary my-1"
                     onClick={() => {
                       setlocation("Hyderabad");
+                      updatelocation();
                     }}
                   >
                     Hyderabad
@@ -135,6 +146,7 @@ const Weather = () => {
                     className="btn btn-primary my-1"
                     onClick={() => {
                       setlocation("Bangalore");
+                      updatelocation();
                     }}
                   >
                     Bangalore

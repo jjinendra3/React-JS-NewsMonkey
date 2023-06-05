@@ -6,12 +6,6 @@ const Navbar = (props) => {
       <nav className="navbar navbar-expand-lg bg-dark navbar-dark sticky-top">
         <div className="container-fluid">
           <Link className="navbar-brand" to="/" style={{ fontWeight: "500" }}>
-            {/* <img
-              src={logo}
-              className="my-1"
-              style={{ width: "10%", height: "10%", borderRadius: "100%" }}
-              alt=""
-            /> */}
             NewsMonkey
           </Link>
           <button

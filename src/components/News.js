@@ -9,13 +9,11 @@ const News = (props) => {
   const [loading, setloading] = useState(false);
   const [page, setpage] = useState(1);
   const [totalRes, settotalRes] = useState(0);
-
   const UpdateNews = async (whycall) => {
     props.progress(10);
     let url;
     if (whycall === "first") {
-      url = `
-      https://newsapi.org/v2/top-headlines?&country=${props.country}&apiKey=${props.api}&category=${props.category}&page=${page}&pageSize=${props.page_size}&sortBy=popularity`;
+      url = `https://newsapi.org/v2/top-headlines?&&country=${props.country}&apiKey=${props.api}&category=${props.category}&page=${page}&pageSize=${props.page_size}&sortBy=popularity`;
     }
     if (whycall === "next") {
       url = `
@@ -40,6 +38,7 @@ const News = (props) => {
     datas = await datas.json();
     props.progress(50);
     setarticles(datas.articles);
+    console.log(articles);
     settotalRes(datas.totalResults);
     setloading(false);
     props.progress(100);
