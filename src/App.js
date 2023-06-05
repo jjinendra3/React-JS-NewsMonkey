@@ -5,7 +5,18 @@ import Newsbox from "./components/News";
 import LoadingBar from "react-top-loading-bar";
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+
 const App = () => {
+  const [color, setcolor] = useState("light");
+  const color_set = () => {
+    if (color === "light") {
+      setcolor("dark");
+      document.body.style.backgroundColor = "black";
+    } else {
+      setcolor("light");
+      document.body.style.backgroundColor = "white";
+    }
+  };
   const [progress, setprogress] = useState(0);
   const progreass = (progrees) => {
     setprogress(progrees);
@@ -14,14 +25,20 @@ const App = () => {
   return (
     <div>
       <BrowserRouter>
-        <Navbar />
-        <LoadingBar height={3} color="#f11946" progress={progress} />
+        <Navbar color={color} colorer={color_set} />
+        <LoadingBar
+          height={3}
+          color="#f11946"
+          progress={progress}
+          colorer={color}
+        />
         <Routes>
           <Route
             exact
             path="/"
             element={
               <Newsbox
+                color={color}
                 api={apiKey}
                 progress={progreass}
                 key="general"
@@ -36,6 +53,7 @@ const App = () => {
             path="/business"
             element={
               <Newsbox
+                color={color}
                 api={apiKey}
                 progress={progreass}
                 key="business"
@@ -50,6 +68,7 @@ const App = () => {
             path="/entertainment"
             element={
               <Newsbox
+                color={color}
                 api={apiKey}
                 progress={progreass}
                 key="entertainment"
@@ -64,6 +83,7 @@ const App = () => {
             path="/health"
             element={
               <Newsbox
+                color={color}
                 api={apiKey}
                 progress={progreass}
                 key="health"
@@ -78,6 +98,7 @@ const App = () => {
             path="/science"
             element={
               <Newsbox
+                color={color}
                 api={apiKey}
                 progress={progreass}
                 key="science"
@@ -92,6 +113,7 @@ const App = () => {
             path="/sports"
             element={
               <Newsbox
+                color={color}
                 api={apiKey}
                 progress={progreass}
                 key="sports"
@@ -106,6 +128,7 @@ const App = () => {
             path="/technology"
             element={
               <Newsbox
+                color={color}
                 api={apiKey}
                 progress={progreass}
                 key="technology"

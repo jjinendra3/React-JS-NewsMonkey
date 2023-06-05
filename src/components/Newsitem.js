@@ -1,11 +1,30 @@
 import React from "react";
-import logo from "C:/Users/asus/Desktop/CWH/newsapp/src/bufferer.png";
+import logo from "./bufferer.png";
 
 const Newsitem = (props) => {
-  let { title, description, imgurl, newsurl, publish_date, author } = props;
+  let { title, description, imgurl, newsurl, publish_date, author, color } =
+    props;
   return (
     <div>
-      <div className="card my-3" style={{ width: "18rem", height: "32rem" }}>
+      {/*  */}
+      <div
+        className="card my-3"
+        style={
+          props.color === "light"
+            ? {
+                backgroundColor: "white",
+                color: "black",
+                width: "18rem",
+                height: "32rem",
+              }
+            : {
+                width: "18rem",
+                height: "32rem",
+                backgroundColor: "#171717",
+                color: "white",
+              }
+        }
+      >
         <img
           src={imgurl === null ? logo : imgurl}
           className="card-img-top"
@@ -18,7 +37,7 @@ const Newsitem = (props) => {
           </h5>
           <div className="d-flex justify-content-between">
             <p
-              className="date text-muted"
+              className="date text-tiny"
               style={{
                 fontSize: "10px",
                 fontWeight: "500",
@@ -30,7 +49,7 @@ const Newsitem = (props) => {
                 : ""}
             </p>
             <p
-              className="card-text text-muted"
+              className="card-text text-tiny"
               style={{ fontSize: "10px", display: "inline" }}
             >
               {author === null ? "Author: Anonymous" : author}
@@ -47,6 +66,15 @@ const Newsitem = (props) => {
             href={newsurl}
             target="_blank  "
             className="btn btn-sm btn-primary"
+            style={
+              props.color === "light"
+                ? {}
+                : {
+                    backgroundColor: "black",
+                    borderColor: "black",
+                    color: "white",
+                  }
+            }
           >
             Read More
           </a>

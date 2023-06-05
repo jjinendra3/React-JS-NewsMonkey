@@ -1,7 +1,7 @@
 import React from "react";
 import loading from "./loading.gif";
 
-const Loader = () => {
+const Loader = (props) => {
   return (
     <div className="text-center">
       <img
@@ -9,7 +9,15 @@ const Loader = () => {
         alt="loading"
         style={{ height: "15%", width: "15%" }}
       />
-      <p style={{ fontWeight: "500" }}>Monkey Fetching News...</p>
+      <p
+        style={
+          props.colorer === "light"
+            ? { fontWeight: "500" }
+            : { fontWeight: "500", color: "white" }
+        }
+      >
+        Monkey Fetching News...
+      </p>
     </div>
   );
 };

@@ -1,14 +1,10 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 
-const Weather = () => {
-  const WeatherApi = process.env.REACT_APP_WEATHER_APP;
+const Weather = (props) => {
   const [temp, settemp] = useState(0);
   const [location, setlocation] = useState("Mumbai");
-
-  const [img, setimg] = useState(
-    "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pngwing.com%2Fen%2Fsearch%3Fq%3Derror&psig=AOvVaw2CmbXL32ahaVghebA0fsuJ&ust=1685977084010000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCND4_Jrwqf8CFQAAAAAdAAAAABAZ"
-  );
+  const [img, setimg] = useState("");
   useEffect(() => {
     updatelocation();
     //eslint-disable-next-line
@@ -16,9 +12,9 @@ const Weather = () => {
   const updatelocation = () => {
     axios
       .get(
-        `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${WeatherApi}`
+        `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=423ae496f5ad8720dfc5baa6a72527c7`
       )
-      //use your api key here
+      //ApiKey is given here for your testing, alhtough it is recommended that you use your own ApiKey
       .then((response) => {
         settemp(Math.floor(response.data.main.temp - 276.15));
 
@@ -34,9 +30,18 @@ const Weather = () => {
     >
       <button
         className="btn btn-outline-primary "
-        style={{ height: "90%" }}
         data-bs-toggle="modal"
         data-bs-target="#exampleModal"
+        style={
+          props.coloro !== "light"
+            ? { height: "90%" }
+            : {
+                height: "90%",
+                borderColor: "#171717",
+                color: "white",
+                backgroundColor: "#171717",
+              }
+        }
       >
         <div className="d-flex justify-content-between">
           <div className="container">
@@ -73,8 +78,22 @@ const Weather = () => {
       >
         <div className="modal-dialog">
           <div className="modal-content">
-            <div className="modal-header">
-              <h1 className="modal-title fs-5" id="exampleModalLabel">
+            <div
+              className="modal-header"
+              style={
+                props.color === "light"
+                  ? {}
+                  : {
+                      backgroundColor: "black",
+                      color: "white",
+                      textAlign: "center",
+                    }
+              }
+            >
+              <h1
+                className="modal-title fs-5 text-justify"
+                id="exampleModalLabel"
+              >
                 Select Your City
               </h1>
               <button
@@ -82,9 +101,17 @@ const Weather = () => {
                 className="btn-close"
                 data-bs-dismiss="modal"
                 aria-label="Close"
+                data-bs-theme="dark"
               ></button>
             </div>
-            <div className="modal-body">
+            <div
+              className="modal-body"
+              style={
+                props.color === "light"
+                  ? {}
+                  : { backgroundColor: "black", color: "white" }
+              }
+            >
               <div className="list-group">
                 <div
                   className="btn-group-vertical"
@@ -98,6 +125,15 @@ const Weather = () => {
                       setlocation("Mumbai");
                       updatelocation();
                     }}
+                    style={
+                      props.color === "light"
+                        ? {}
+                        : {
+                            borderColor: "blue",
+                            backgroundColor: "black",
+                            color: "white",
+                          }
+                    }
                   >
                     Mumbai
                   </button>
@@ -108,6 +144,15 @@ const Weather = () => {
                       setlocation("Delhi");
                       updatelocation();
                     }}
+                    style={
+                      props.color === "light"
+                        ? {}
+                        : {
+                            borderColor: "blue",
+                            backgroundColor: "black",
+                            color: "white",
+                          }
+                    }
                   >
                     Delhi
                   </button>
@@ -118,6 +163,15 @@ const Weather = () => {
                       setlocation("Chennai");
                       updatelocation();
                     }}
+                    style={
+                      props.color === "light"
+                        ? {}
+                        : {
+                            borderColor: "blue",
+                            backgroundColor: "black",
+                            color: "white",
+                          }
+                    }
                   >
                     Chennai
                   </button>
@@ -128,6 +182,15 @@ const Weather = () => {
                       setlocation("Kolkata");
                       updatelocation();
                     }}
+                    style={
+                      props.color === "light"
+                        ? {}
+                        : {
+                            borderColor: "blue",
+                            backgroundColor: "black",
+                            color: "white",
+                          }
+                    }
                   >
                     Kolkata
                   </button>
@@ -138,6 +201,15 @@ const Weather = () => {
                       setlocation("Hyderabad");
                       updatelocation();
                     }}
+                    style={
+                      props.color === "light"
+                        ? {}
+                        : {
+                            borderColor: "blue",
+                            backgroundColor: "black",
+                            color: "white",
+                          }
+                    }
                   >
                     Hyderabad
                   </button>
@@ -148,6 +220,15 @@ const Weather = () => {
                       setlocation("Bangalore");
                       updatelocation();
                     }}
+                    style={
+                      props.color === "light"
+                        ? {}
+                        : {
+                            borderColor: "blue",
+                            backgroundColor: "black",
+                            color: "white",
+                          }
+                    }
                   >
                     Bangalore
                   </button>
