@@ -4,7 +4,7 @@ This is a ReactJS web application called "NewsMonkey" that fetches live news dat
 
 ## Features
 
-- Fetches live news data from the NewsAPI.
+- Fetches live news data from the NewsAPI and live weather updates from OpenWeather.
 - Categorizes news articles into subcategories.
 - Displays news articles based on selected subcategories.
 - Implements routing using React Router DOM for seamless navigation.
@@ -29,5 +29,5 @@ Contributions are welcome! If you find any issues or have suggestions for improv
 
 ## Acknowledgements
 
-- This project utilizes the [NewsAPI](https://newsapi.org/) to fetch live news data.
+- This project utilizes the [NewsAPI](https://newsapi.org/) and [OpenWeather](https://openweathermap.org/api) to fetch live news data.
 
